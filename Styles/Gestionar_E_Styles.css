@@ -1,0 +1,38 @@
+.main{
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: 20% 80%;
+
+}
+.pageTitle {
+    font-family: "Roboto Slab", serif;
+    padding-left: 100px;
+    padding-top: 30px;
+    font-weight:bolder;
+    font-size: 4rem;
+    font-style: normal; 
+    color:rgb(116, 101, 132);   
+}
+.linksPage {
+    display: flex;
+    justify-content:start;
+    width: 100%;
+    gap: 10px;
+       
+}
+
+.linksPage{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+   
+}
+.subseccion {
+    width: 10em;   
+    height: 10em;     
+}
+
+.link-item a{
+    margin:30px;
+}
