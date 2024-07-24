@@ -1,8 +1,4 @@
 <?php
-// Desactivar la visualización de errores (opcional)
-// error_reporting(0);
-// ini_set('display_errors', 0);
-
 include('../Configuraciones/conexion.php');
 
 if (isset($_POST['encuesta_id'])) {
