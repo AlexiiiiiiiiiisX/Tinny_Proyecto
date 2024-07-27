@@ -1,6 +1,6 @@
 
 <?php
-include('../Configuraciones/conexion.php');
+include('conexion.php');
 
 if(isset($_POST['Guardar'])){
     // Datos de la encuesta

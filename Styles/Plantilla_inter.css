@@ -8,6 +8,7 @@ html {
     height: 100%;
 }
 
+
 body{
     min-height: 100%;
     padding: 10px;
@@ -62,6 +63,7 @@ body{
 article{
     grid-area: main;
     background-color: #ffffff;
+    
 }
 
 

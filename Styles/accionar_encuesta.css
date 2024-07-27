@@ -1,8 +1,7 @@
-
-
-
 .encuesta-cuadro {
-    border: 1px solid #ddd;
+    font-family: "Roboto Slab", serif;
+    background-color: #e8f0f8; 
+    border-radius: 4px;
     padding: 10px;
     margin: 10px;
     width: 300px;
@@ -10,9 +9,9 @@
     display: inline-block;
     vertical-align: top;
 }
-.encuesta-cuadro img {
-    max-width: 100%;
-    height: auto;
+
+.publicada {
+    background-color: #5784d1; /* Verde claro para encuestas publicadas */
 }
 
 .cajabuscar {
@@ -74,7 +73,7 @@
     cursor: pointer;
     text-align: center;
     padding-top: 10px;
-    color: #a4a4a4;
+    color: #715a5a;
     transition: all 0.25s linear;
     background: transparent;
     z-index: 10;
