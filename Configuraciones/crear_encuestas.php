@@ -15,10 +15,10 @@ if(isset($_POST['Guardar'])){
 
         if(!((strpos($tipo,'jpeg') || strpos($tipo,'jpg') || strpos($tipo,'png')))){
             $_SESSION['mensaje'] = 'solo se permite archivos jpeg, jpg, png';
-            header('location:../secciones/crear_encuestas.html');
+            header('location:../secciones/b_crear_encuestas.html');
         } else {
             // Insertar datos en la tabla encuestas...................................................................................................................
-            $query = "INSERT INTO encuestas (nombre, pregunta, imagen, id_usuario, categoria) VALUES ('$nombre', '$pregunta', '$imagen', 1, '$tema')";
+            $query = "INSERT INTO encuestas (nombre, pregunta, imagen, id_usuario, categoria) VALUES ('$nombre', '$pregunta', '$imagen', 3, '$tema')";
             $resultado = mysqli_query($conn, $query);
 
             if($resultado){
@@ -43,14 +43,14 @@ if(isset($_POST['Guardar'])){
                 // Este de aqui mueve el archivo .............................................................................................................
                 if(move_uploaded_file($temp, $destino)){
                     $_SESSION['mensaje'] = 'se ha subido correctamente';
-                    header('location:../secciones/crear_encuestas.html');
+                    header('location:../secciones/b_crear_encuestas.html');
                 } else {
                     $_SESSION['mensaje'] = 'error al mover la imagen al directorio';
-                    header('location:../secciones/crear_encuestas.html');
+                    header('location:../secciones/b_crear_encuestas.html');
                 }
             } else {
                 $_SESSION['mensaje'] = 'ocurrio un error en el servidor';
-                header('location:../secciones/crear_encuestas.html');
+                header('location:../secciones/b_crear_encuestas.html');
             }
         }    
     }

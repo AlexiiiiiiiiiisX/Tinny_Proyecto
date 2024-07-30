@@ -1,5 +1,5 @@
 <?php
-include('../Configuraciones/conexion.php');
+include('conexion.php');
 
 if (isset($_POST['encuesta_id'])) {
     $encuesta_id = mysqli_real_escape_string($conn, $_POST['encuesta_id']);
@@ -40,4 +40,4 @@ if (isset($_POST['encuesta_id'])) {
 mysqli_close($conn);
 ?>
 
-<a href="buscar_encuestas_eliminar.php">Volver a Buscar Encuestas</a>
+<a href="../secciones/b_eliminar_encuesta.php">Volver a Buscar Encuestas</a>

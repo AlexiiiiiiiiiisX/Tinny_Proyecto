@@ -1,5 +1,5 @@
 <?php
-include('../Configuraciones/conexion.php');
+include('conexion.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['encuesta_id'])) {
     $encuesta_id = mysqli_real_escape_string($conn, $_POST['encuesta_id']);
@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['encuesta_id'])) {
     mysqli_close($conn);
     
     // Redirigir de vuelta a la página de búsqueda de encuestas
-    header("Location: buscar_encuestas_publicar.php");
+    header("Location: ../secciones/b_publicar_encuesta.php");
     exit();
 }
 ?>
+o

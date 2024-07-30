@@ -21,9 +21,9 @@
             background-color: #d4edda;
         }
     </style>
-</head>
+</head> 
 
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<!-------------------------------- ---------------------------------------------------------------------------------------------------------------------------->
 <body class="grid-container">
 <nav class="navar">
     <div class="nav-links">
@@ -36,12 +36,12 @@
             </a>
         </div>
         <div class="nav-item">
-            <a href="gestionar_encuestas.html">
+            <a href="b_gestionar_encuestas.html">
                 <img class="imagen" src="../src/note.png" alt="Mis encuestas"> Mis encuestas
             </a>
         </div>
         <div class="nav-item">
-            <a href="mostrar_graficos.html">
+            <a href="c_mostrar_graficos.html">
                 <img class="imagen" src="../src/grafic.png" alt="Graficar"> Graficar
             </a>
         </div>
@@ -52,7 +52,7 @@
 <article class="main">
     <h2>Buscar Encuestas</h2>
     <div class="cajabuscar">
-        <form method="GET" action="buscar_encuestas_publicar.php" id="buscarform">
+        <form method="GET" action="b_publicar_encuesta.php" id="buscarform">
             <fieldset>
                 <input type="text" id="termino" name="termino" placeholder="Buscar" />
                 <button class="button-search" type="submit">
@@ -106,7 +106,7 @@
                         echo "<td>" . $fechaPublicacion . "</td>";
                         echo "<td>";
                         if ($row['publicado'] != 'si') {
-                            echo "<form method='POST' action='publicar_encuesta.php'>";
+                            echo "<form method='POST' action='../Configuraciones/buscar_encuestas_publicar.php'>";
                             echo "<input type='hidden' name='encuesta_id' value='" . $row['id'] . "'>";
                             echo "<button type='submit' class='btn btn-primary'>Publicar</button>";
                             echo "</form>";

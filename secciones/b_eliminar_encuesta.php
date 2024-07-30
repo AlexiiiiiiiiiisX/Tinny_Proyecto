@@ -6,6 +6,9 @@
     <title>Tinny</title>
     <link rel="stylesheet" href="/Tinny/Styles/Plantilla_inter.css">
     <link rel="stylesheet" href="/Tinny/Styles/accionar_encuesta.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         .encuesta-cuadro {
             border: 1px solid #ddd;
@@ -29,17 +32,17 @@
             <img class="logo" src="../src/Tinny_logo.png" alt="Logo">
         </div>
         <div class="nav-item">
-            <a href="index.html">
+            <a href="a_index.php">
                 <img class="imagen" src="../src/home.png" alt="Inicio"> Inicio
             </a>
         </div>
         <div class="nav-item">
-            <a href="gestionar_encuestas.html">
+            <a href="b_gestionar_encuestas.html">
                 <img class="imagen" src="../src/note.png" alt="Mis encuestas"> Mis encuestas
             </a>
         </div>
         <div class="nav-item">
-            <a href="mostrar_graficos.html">
+            <a href="c_mostrar_graficos.html">
                 <img class="imagen" src="../src/grafic.png" alt="Graficar"> Graficar
             </a>
         </div>
@@ -49,7 +52,7 @@
 <article class="main">
     <h2>Buscar Encuestas</h2>
     <div class="cajabuscar">
-        <form method="GET" action="buscar_encuestas_eliminar.php" id="buscarform">
+        <form method="GET" action="b_eliminar_encuesta.php" id="buscarform">
             <fieldset>
                 <input type="text" id="termino" name="termino" placeholder="Buscar" />
                 <button class="button-search" type="submit">
@@ -83,7 +86,7 @@
                 echo "<h3>" . $row['nombre'] . "</h3>";
                 echo "<p>" . $row['pregunta'] . "</p>";
                 echo "<p><strong>Tema:</strong> " . $row['categoria'] . "</p>";
-                echo "<form method='POST' action='eliminar_encuesta.php'>";
+                echo "<form method='POST' action='../Configuraciones/buscar_encuestas_eliminar.php'>";
                 echo "<input type='hidden' name='encuesta_id' value='" . $row['id'] . "'>";
                 echo "<button type='submit'>Eliminar</button>";
                 echo "</form>";
